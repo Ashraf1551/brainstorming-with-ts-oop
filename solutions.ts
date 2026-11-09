@@ -19,3 +19,13 @@ const processInput = (input: string | number | boolean): string | number => {
 const formatCoordinate = (val: readonly [number, number, string]): string => {
   return `Location: ${val[2]} (${val[0]}, ${val[1]})`;
 };
+
+function concatenateArrays<T>(...arrays: T[][]): T[] {
+  let result: T[] = [];
+
+  for (let i = 0; i < arrays.length; i++) {
+    result = result.concat(arrays[i]);
+  }
+
+  return result;
+}
