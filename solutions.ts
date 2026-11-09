@@ -15,3 +15,7 @@ const processInput = (input: string | number | boolean): string | number => {
     return input ? "Active" : "Inactive";
   }
 };
+
+const formatCoordinate = (val: readonly [number, number, string]): string => {
+  return `Location: ${val[2]} (${val[0]}, ${val[1]})`;
+};
